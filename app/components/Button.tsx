@@ -1,39 +1,67 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import Link from "next/link";
+
+type ButtonVariant = "primary" | "secondary" | "outline" | "featured";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
-    variant?: "primary" | "secondary" | "outline";
-    size?: "sm" | "md" | "lg";
+    variant?: ButtonVariant;
+    iconLeft?: ReactNode;
+    iconRight?: ReactNode;
+    href?: string;
+    openInNewTab?: boolean;
 }
+
+const variantStyles: Record<ButtonVariant, string> = {
+    primary: "bg-primary text-white hover:bg-primary/90",
+    secondary: "bg-secondary text-white hover:bg-secondary/90",
+    outline: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
+    featured: "bg-primary text-white shadow-md hover:-translate-y-0.5",
+};
 
 export default function Button({
     children,
     variant = "primary",
-    size = "md",
     className = "",
+    iconLeft,
+    iconRight,
+    href,
+    openInNewTab = false,
+    onClick,
     ...props
 }: ButtonProps) {
-    const baseStyles =
-        "inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 cursor-pointer";
+    const isFeatured = variant === "featured";
 
-    const variants = {
-        primary: "bg-primary text-white hover:bg-primary/90",
-        secondary: "bg-secondary text-white hover:bg-secondary/90",
-        outline: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
-    };
+    const sizeClasses = isFeatured
+        ? "px-6 py-3 text-base md:px-10 md:py-5 md:text-lg font-bold"
+        : "px-4 py-2 text-sm md:px-6 md:py-3 text-base";
 
-    const sizes = {
-        sm: "px-4 py-2 text-sm",
-        md: "px-6 py-3 text-base",
-        lg: "px-8 py-4 text-lg",
-    };
+    const baseClasses = `inline-flex items-center justify-center rounded-full transition-all duration-200 cursor-pointer gap-2 ${variantStyles[variant]} ${sizeClasses} ${className}`;
+
+    if (href) {
+        return (
+            <Link
+                href={href}
+                className={baseClasses}
+                target={openInNewTab ? "_blank" : undefined}
+                rel={openInNewTab ? "noopener noreferrer" : undefined}
+            >
+                {iconLeft}
+                {children}
+                {iconRight}
+            </Link>
+        );
+    }
 
     return (
         <button
-            className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+            className={baseClasses}
+            onClick={onClick}
             {...props}
         >
+            {iconLeft}
             {children}
+            {iconRight}
         </button>
     );
 }
