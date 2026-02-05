@@ -18,13 +18,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
     return (
         <NotchCard 
-            className={className}
-            mobileWidth={300}
-            mobileHeight={350}
-            tabletWidth={320}
-            tabletHeight={380}
-            desktopWidth={350}
-            desktopHeight={400}
+            className={`w-[300px] h-[350px] md:w-[320px] md:h-[380px] lg:w-[350px] lg:h-[400px] ${className}`}
         >
             <div className="group p-8 h-full flex flex-col justify-between bg-gray-100 text-gray-800 hover:text-white hover:bg-orange-500 transition-colors duration-300">
                 <div className="mb-6">
