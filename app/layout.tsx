@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${plusJakartaSans.variable} ${inter.variable} antialiased bg-white min-h-screen flex flex-col max-w-7xl mx-auto`}
+        className={`${plusJakartaSans.variable} ${inter.variable} antialiased bg-white min-h-screen flex flex-col px-3 max-w-7xl mx-auto`}
       >
         <Header />
-        <main className="flex-1 flex flex-col mt-20">
+        <main className="flex-1 flex flex-col w-full mt-20">
           {children}
         </main>
       </body>
