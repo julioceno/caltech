@@ -13,10 +13,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
-    primary: "bg-primary text-white hover:bg-primary/90",
+    primary: "bg-primary text-white hover:bg-neutral-900",
     secondary: "bg-secondary text-white hover:bg-secondary/90",
     outline: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
-    featured: "bg-primary text-white shadow-md hover:-translate-y-0.5",
+    featured: "bg-primary text-white shadow-md ",
 };
 
 export default function Button({
@@ -36,7 +36,7 @@ export default function Button({
         ? "px-6 py-3 text-base md:px-10 md:py-5 md:text-lg font-bold"
         : "px-4 py-2 text-sm md:px-6 md:py-3 text-base";
 
-    const baseClasses = `inline-flex items-center justify-center rounded-full transition-all duration-200 cursor-pointer gap-2 ${variantStyles[variant]} ${sizeClasses} ${className}`;
+    const baseClasses = `inline-flex items-center justify-center rounded-full transition-all duration-200 cursor-pointer gap-2 hover:-translate-y-0.5 ${variantStyles[variant]} ${sizeClasses} ${className}`;
 
     if (href) {
         return (
