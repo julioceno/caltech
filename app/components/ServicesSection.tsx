@@ -25,11 +25,8 @@ export default function ServicesSection() {
     return (
         <section className="py-16 px-4 bg-white">
             <div className="max-w-7xl mx-auto">
-                <div className="mb-16">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                        Nossa experiência em<br />
-                        <span className="block">construção industrial</span>
-                    </h2>
+                <div className="mb-16 md:max-w-xl">
+                    <SectionHeading title="Nossa experiência em construção industrial" />
                 </div>
                 
                 <div className="flex flex-col md:flex-row gap-8 justify-start items-center md:items-stretch flex-wrap">

@@ -2,7 +2,7 @@ import React from 'react';
 
 interface SectionHeadingProps {
     title: string;
-    subtitle: string;
+    subtitle?: string;
 }
 
 const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle }) => {
@@ -11,9 +11,11 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle }) => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-primary">
                 {title}
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 font-inter leading-relaxed">
-                {subtitle}
-            </p>
+            {subtitle && (
+                <p className="text-base sm:text-lg text-gray-600 font-inter leading-relaxed">
+                    {subtitle}
+                </p>
+            )}
         </div>
     );
 };
