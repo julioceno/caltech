@@ -23,13 +23,13 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section className="py-16 px-4 bg-white">
+        <section className="py-16">
             <div className="max-w-7xl mx-auto">
-                <div className="mb-16 md:max-w-xl">
+                <div className="mb-16 lg:max-w-xl">
                     <SectionHeading title="Nossa experiência em construção industrial" />
                 </div>
                 
-                <div className="flex flex-col md:flex-row gap-8 justify-start items-center md:items-stretch flex-wrap">
+                <div className="flex flex-col md:flex-row gap-8 justify-center lg:justify-start items-center md:items-stretch flex-wrap">
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}
