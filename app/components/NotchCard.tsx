@@ -54,7 +54,7 @@ export default function ClipCard({
     return (
         <div className={`relative ${className}`} style={{ width: `${width}px`, height: `${height}px` }}>
             <div
-                className="absolute inset-0 bg-secondary"
+                className="absolute inset-0 bg-neutral-100 transition-colors duration-300 hover:bg-secondary"
                 style={{
                     clipPath,
                     overflow: "hidden",
