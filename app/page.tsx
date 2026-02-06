@@ -1,8 +1,9 @@
-import NotchCard from "./components/NotchCard";
 import Hero from "./components/Hero";
 import ServicesSection from "./components/ServicesSection";
 import AboutSection from "./components/AboutSection";
 import ServicesAccordionSection from "./components/ServicesAccordionSection";
+import ContactCard from "./components/ContactCard";
+import ContactSection from "./components/ContactSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ServicesAccordionSection />
+      <ContactSection />
     </div>
   );
 }
