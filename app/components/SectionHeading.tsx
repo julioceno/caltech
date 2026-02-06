@@ -8,7 +8,7 @@ interface SectionHeadingProps {
 const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle }) => {
     return (
         <div className="flex flex-col gap-3 sm:gap-4 text-center lg:text-start">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-primary">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-tight font-bold text-primary">
                 {title}
             </h2>
             {subtitle && (
