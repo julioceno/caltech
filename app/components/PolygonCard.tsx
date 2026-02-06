@@ -4,31 +4,40 @@ interface PolygonCardProps {
   children?: ReactNode;
   className?: string;
   notchSize?: number;
+  notchWidth?: number;
+  notchHeight?: number;
   cornerRadius?: number;
   notchBgColor?: string;
   cardBgColor?: string;
+  notchContent?: ReactNode;
 }
 
 export default function PolygonCard({
   children,
   className = "",
   notchSize = 60,
-  cornerRadius = 10,
+  notchWidth,
+  notchHeight,
+  cornerRadius = 16,
   notchBgColor = "#ffffff",
   cardBgColor = "bg-primary",
+  notchContent,
 }: PolygonCardProps) {
+  const width = notchWidth ?? notchSize;
+  const height = notchHeight ?? notchSize;
+
   return (
     <div className={`relative inline-block ${className}`}>
       <div
         className={`overflow-hidden ${cardBgColor}`}
         style={{
           borderRadius: cornerRadius,
-          minHeight: notchSize + 32,
+          minHeight: height + 32,
         }}
       >
         <div
           style={{
-            paddingBottom: notchSize + 16,
+            paddingBottom: height + 16,
           }}
         >
           {children}
@@ -38,8 +47,8 @@ export default function PolygonCard({
       <div
         className="absolute bottom-0 right-0"
         style={{
-          width: notchSize,
-          height: notchSize,
+          width: width,
+          height: height,
           backgroundColor: notchBgColor,
           borderTopLeftRadius: cornerRadius,
         }}
@@ -50,7 +59,7 @@ export default function PolygonCard({
         style={{
           width: cornerRadius,
           height: cornerRadius,
-          bottom: notchSize,
+          bottom: height,
           background: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, ${notchBgColor} ${cornerRadius}px)`,
         }}
       />
@@ -60,20 +69,22 @@ export default function PolygonCard({
         style={{
           width: cornerRadius,
           height: cornerRadius,
-          right: notchSize,
+          right: width,
           background: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, ${notchBgColor} ${cornerRadius}px)`,
         }}
       />
 
-      <div
-        className="absolute bg-primary rounded-lg pointer-events-none"
-        style={{
-          width: notchSize - 8,
-          height: notchSize - 8,
-          right: 4,
-          bottom: 4,
-        }}
-      />
+      {notchContent && (
+        <div
+          className="absolute bottom-0 right-0 flex items-center justify-center"
+          style={{
+            width: width,
+            height: height,
+          }}
+        >
+          {notchContent}
+        </div>
+      )}
     </div>
   );
 }

@@ -13,14 +13,6 @@ export default function Home() {
       <ServicesSection />
       <ServicesAccordionSection />
       <ContactSection />
-
-      <PolygonCard className="w-full" cardBgColor="bg-primary">
-  <div className="p-8 h-40 text-white">
-    {/* conteúdo do footer */}
-  </div>
-</PolygonCard>
-
-  
     </div>
   );
 }
