@@ -23,8 +23,8 @@ export default function PolygonCard({
   cardBgColor = "bg-primary",
   notchContent,
 }: PolygonCardProps) {
-  const width = notchWidth ?? notchSize;
-  const height = notchHeight ?? notchSize;
+  const width = notchWidth || notchSize;
+  const height = notchHeight || notchSize;
 
   return (
     <div className={`relative inline-block ${className}`}>

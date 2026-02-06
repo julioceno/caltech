@@ -32,19 +32,44 @@ function SocialIcons() {
 }
 
 export default function Footer() {
-  return (
-    <footer>
-        <PolygonCard
-          className="w-full"
-          cardBgColor="bg-primary"
-          notchWidth={180}
-          notchHeight={60}
-          notchContent={<SocialIcons />}
-        >
-            <div className="p-8 h-40 text-white">
-                {/* conteúdo do footer */}
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <footer>
+            <PolygonCard
+                className="w-full"
+                cardBgColor="bg-primary"
+                notchWidth={180}
+                notchHeight={40}
+                notchContent={<SocialIcons />}
+            >
+            <div className="px-8 pt-10 md:pt-20 pb-4 md:pb-8 text-white flex flex-col justify-center gap-5 md:gap-8">
+                <div className="flex flex-col md:flex-row items-center md:items-start  justify-between gap-3">
+                    <p className="text-sm font-medium text-center md:text-left">
+                        Construindo o futuro com excelência
+                    </p>
+
+                    <nav className="flex items-center gap-4 md:gap-10">
+                        <NavItem href="#about" light>Sobre nós</NavItem>
+                        <NavItem href="#services" light>Serviços</NavItem>
+                        <NavItem href="#projects" light>Projetos</NavItem>
+                        <NavItem href="#contact" light>Contato</NavItem>
+                    </nav>
+                </div>
+                <div className="flex flex-col md:flex-row justify-between text-center md:text-left items-center md:items-start gap-2 md:gap-5">
+                    <Image
+                        src="/logo.svg"
+                        alt="Caltech Logo"
+                        className="invert"
+                        width={100}
+                        height={100}
+                    />
+                    <h3 className="text-xs font-medium text-white">
+                        Copyright © {currentYear} Caltech | 00.000.000/0000-00
+                    </h3>
+                </div>
             </div>
-        </PolygonCard>
-    </footer>
-  );
+            </PolygonCard>
+        </footer>
+    );
 }

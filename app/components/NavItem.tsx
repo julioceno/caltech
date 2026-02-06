@@ -6,10 +6,11 @@ import { usePathname, useRouter } from "next/navigation";
 interface NavItemProps {
     href: string;
     children: React.ReactNode;
+    light?: boolean;
     onClick?: () => void;
 }
 
-export function NavItem({ href, children, onClick }: NavItemProps) {
+export function NavItem({ href, children, light, onClick }: NavItemProps) {
     const pathname = usePathname();
     const router = useRouter();
 
@@ -36,7 +37,7 @@ export function NavItem({ href, children, onClick }: NavItemProps) {
         <Link
             href={href}
             onClick={handleClick}
-            className="group relative font-urbanist text-sm font-semibold text-primary transition-colors hover:text-secondary"
+            className={`group relative font-urbanist text-sm  ${light ? "text-white" : "text-primary"} hover:text-secondary transition-colors`}
         >
             {children}
             <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-secondary transition-all duration-300 ease-out group-hover:w-full"></span>
