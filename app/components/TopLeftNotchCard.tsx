@@ -4,9 +4,7 @@ interface TopLeftNotchCardProps {
   children?: ReactNode;
   label?: ReactNode;
   className?: string;
-  topNotchWidth?: number;
-  topNotchHeight?: number;
-  bottomNotchSize?: number;
+  notchSize?: number;
   cornerRadius?: number;
   notchBgColor?: string;
   cardBgColor?: string;
@@ -16,16 +14,15 @@ export default function TopLeftNotchCard({
   children,
   label,
   className = "",
-  topNotchWidth = 130,
-  topNotchHeight = 80,
-  bottomNotchSize = 70,
+  notchSize = 60,
   cornerRadius = 10,
   notchBgColor = "#ffffff",
   cardBgColor = "#d1d5db",
 }: TopLeftNotchCardProps) {
+  const topNotchWidth = notchSize * 2;
+  const topNotchHeight = notchSize;
   return (
     <div className={`relative ${className}`}>
-      {/* ── Label no recorte superior esquerdo ── */}
       {label && (
         <div
           className="absolute z-10"
@@ -39,7 +36,6 @@ export default function TopLeftNotchCard({
         </div>
       )}
 
-      {/* ── Corpo do card ── */}
       <div
         className="absolute inset-0 overflow-hidden"
         style={{
@@ -47,11 +43,10 @@ export default function TopLeftNotchCard({
           backgroundColor: cardBgColor,
         }}
       >
-        {/* Conteúdo */}
         <div
           className="relative h-full"
           style={{
-            padding: `${topNotchHeight + 16}px 24px ${bottomNotchSize + 16}px 24px`,
+            padding: `${topNotchHeight + 16}px 24px ${notchSize + 16}px 24px`,
           }}
         >
           {children}
@@ -69,28 +64,22 @@ export default function TopLeftNotchCard({
         }}
       />
 
-      {/* ── Curvas côncavas do recorte superior esquerdo ── */}
-   
-     
-
-      {/* ── Recorte inferior direito (notch) ── */}
       <div
         className="absolute bottom-0 right-0"
         style={{
-          width: bottomNotchSize,
-          height: bottomNotchSize,
+          width: notchSize,
+          height: notchSize,
           backgroundColor: notchBgColor,
           borderTopLeftRadius: cornerRadius,
         }}
       />
 
-      {/* ── Curvas côncavas do recorte inferior direito ── */}
       <div
         className="absolute right-0 pointer-events-none"
         style={{
           width: cornerRadius,
           height: cornerRadius,
-          bottom: bottomNotchSize,
+          bottom: notchSize,
           background: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, ${notchBgColor} ${cornerRadius}px)`,
         }}
       />
@@ -99,17 +88,16 @@ export default function TopLeftNotchCard({
         style={{
           width: cornerRadius,
           height: cornerRadius,
-          right: bottomNotchSize,
+          right: notchSize,
           background: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, ${notchBgColor} ${cornerRadius}px)`,
         }}
       />
 
-      {/* ── Quadrado decorativo no recorte inferior direito ── */}
       <div
         className="absolute bg-primary rounded-lg pointer-events-none"
         style={{
-          width: bottomNotchSize - 8,
-          height: bottomNotchSize - 8,
+          width: notchSize - 8,
+          height: notchSize - 8,
           right: 4,
           bottom: 4,
         }}
