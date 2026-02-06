@@ -17,12 +17,11 @@ export default function TopLeftNotchCard({
   notchSize = 60,
   cornerRadius = 10,
   notchBgColor = "#ffffff",
-  cardBgColor = "#d1d5db",
 }: TopLeftNotchCardProps) {
   const topNotchWidth = notchSize * 2;
   const topNotchHeight = notchSize;
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative inline-block ${className}`}>
       {label && (
         <div
           className="absolute z-10"
@@ -37,14 +36,14 @@ export default function TopLeftNotchCard({
       )}
 
       <div
-        className="absolute inset-0 overflow-hidden"
+        className="overflow-hidden bg-gray-100"
         style={{
           borderRadius: cornerRadius,
-          backgroundColor: cardBgColor,
+          minWidth: topNotchWidth + 48,
+          minHeight: topNotchHeight + notchSize + 32,
         }}
       >
         <div
-          className="relative h-full"
           style={{
             padding: `${topNotchHeight + 16}px 24px ${notchSize + 16}px 24px`,
           }}
@@ -53,7 +52,6 @@ export default function TopLeftNotchCard({
         </div>
       </div>
 
-      {/* ── Recorte superior esquerdo (notch) ── */}
       <div
         className="absolute top-0 left-0"
         style={{
