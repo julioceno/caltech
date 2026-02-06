@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { BsPlus } from 'react-icons/bs';
+import { BsDash, BsPlus } from 'react-icons/bs';
 
 interface AccordionItem {
   id: string;
@@ -15,16 +15,27 @@ interface AccordionProps {
 }
 
 export default function Accordion({ items, allowMultipleOpen = false }: AccordionProps) {
-  const [openId, setOpenId] = useState<string | null>(null);
+  const [openItems, setOpenItems] = useState<Set<string>>(new Set());
 
   const toggleItem = (id: string) => {
-    setOpenId(openId === id ? null : id);
-  } 
+    const newOpenItems = new Set(openItems);
+    
+    if (newOpenItems.has(id)) {
+      newOpenItems.delete(id);
+    } else {
+      if (!allowMultipleOpen) {
+        newOpenItems.clear();
+      }
+      newOpenItems.add(id);
+    }
+    
+    setOpenItems(newOpenItems);
+  };
 
   return (
     <div className="w-full space-y-4">
       {items.map((item) => {
-        const isOpen = openId === item.id;
+        const isOpen = openItems.has(item.id);
         
         return (
           <div
@@ -37,14 +48,18 @@ export default function Accordion({ items, allowMultipleOpen = false }: Accordio
             }`}
           >
             <div className="flex items-center justify-between p-6">
-                <h3 className={`text-lg font-semibold ${
-                    isOpen ? 'text-white' : 'text-primary'
+                <h3 className={`text-lg md:text-xl font-semibold ${
+                    isOpen ? 'text-white' : 'text-gray-900'
                 }`}>
                     {item.title}
                 </h3>
                 
-                <div className='rounded-md h-8 w-8 flex justify-center items-center bg-primary'>
-                    <BsPlus className='text-white text-3xl'/>
+               <div className='rounded-md h-8 w-8 flex justify-center items-center bg-primary text-white text-3xl'>
+                 {isOpen ? (
+                   <BsDash />
+                 ) : (
+                   <BsPlus />
+                 )}
                 </div>
             </div>
 
@@ -54,7 +69,7 @@ export default function Accordion({ items, allowMultipleOpen = false }: Accordio
               }`}
             >
               <div className="px-6 pb-6">
-                <p className="text-white text-sm leading-relaxed">
+                <p className="text-white text-sm md:text-lg leading-relaxed">
                   {item.content}
                 </p>
               </div>
