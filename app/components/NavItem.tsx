@@ -37,7 +37,7 @@ export function NavItem({ href, children, light, onClick }: NavItemProps) {
         <Link
             href={href}
             onClick={handleClick}
-            className={`group relative font-urbanist text-sm  ${light ? "text-white" : "text-primary"} hover:text-secondary transition-colors`}
+            className={`group relative font-urbanist text-xs sm:text-sm text-center ${light ? "text-white" : "text-primary"} hover:text-secondary transition-colors`}
         >
             {children}
             <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-secondary transition-all duration-300 ease-out group-hover:w-full"></span>
