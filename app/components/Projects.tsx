@@ -10,7 +10,7 @@ export default function Projects() {
                     title="Resultados comprovados em construção comercial"
                     size="md"
                     light
-                    className="max-w-2xl"
+                    className="lg:max-w-2xl"
                 />
 
                 <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center lg:justify-start items-center md:items-stretch flex-wrap">
