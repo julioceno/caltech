@@ -5,8 +5,8 @@ interface NotchCardProps {
   className?: string;
   notchSize?: number;
   cornerRadius?: number;
-  notchBgColor?: string;
-  notchSquareClassName?: "bg-primary" | 'bg-secondary';
+  notchBgClassName?: string;
+  notchSquareClassName?: string;
   notchIcon?: ReactNode;
 }
 
@@ -15,7 +15,7 @@ export default function NotchCard({
   className = "",
   notchSize = 50,
   cornerRadius = 10,
-  notchBgColor = "#ffffff",
+  notchBgClassName = "bg-white",
   notchSquareClassName = "bg-primary",
   notchIcon,
 }: NotchCardProps) {
@@ -29,32 +29,33 @@ export default function NotchCard({
       </div>
 
       <div
-        className="absolute bottom-0 right-0"
+        className={`absolute bottom-0 right-0 ${notchBgClassName}`}
         style={{
           width: notchSize,
           height: notchSize,
-          backgroundColor: notchBgColor,
           borderTopLeftRadius: cornerRadius,
         }}
       />
 
       <div
-        className="absolute right-0 pointer-events-none"
+        className={`absolute right-0 pointer-events-none ${notchBgClassName}`}
         style={{
           width: cornerRadius,
           height: cornerRadius,
           bottom: notchSize,
-          background: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, ${notchBgColor} ${cornerRadius}px)`,
+          maskImage: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, black ${cornerRadius}px)`,
+          WebkitMaskImage: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, black ${cornerRadius}px)`,
         }}
       />
 
       <div
-        className="absolute bottom-0 pointer-events-none"
+        className={`absolute bottom-0 pointer-events-none ${notchBgClassName}`}
         style={{
           width: cornerRadius,
           height: cornerRadius,
           right: notchSize,
-          background: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, ${notchBgColor} ${cornerRadius}px)`,
+          maskImage: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, black ${cornerRadius}px)`,
+          WebkitMaskImage: `radial-gradient(circle at 0 0, transparent ${cornerRadius}px, black ${cornerRadius}px)`,
         }}
       />
 

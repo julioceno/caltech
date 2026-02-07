@@ -28,7 +28,7 @@ export default function ProjectCard({
         <Link href={link || "#"} className={`group hover:-translate-y-1 transition-transform duration-300 ${className}`}>
             <NotchCard
                 className="w-[300px] h-[350px] md:w-[320px] md:h-[380px] lg:w-[350px] lg:h-[400px]"
-                notchBgColor="#171717" // TODO: Adjust this color to tailwind's neutral-900
+                notchBgClassName="bg-neutral-900"
                 notchSquareClassName="bg-secondary"
                 notchIcon={<FiArrowUpRight className="w-5 h-5 text-white" />}
             >
