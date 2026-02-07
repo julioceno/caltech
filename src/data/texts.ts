@@ -80,7 +80,7 @@ navLinks: [
   footer: {
     slogan: "Construindo o futuro com excelência",
     copyright: "Copyright © Caltech | 00.000.000/0000-00",
-    cnpj: "00.000.000/0000-00",
+    cnpj: "00.000.000/0000-00", // TODO: substituir pelo CNPJ real
   },
   backToHome: {
     label: "Voltar para página inicial",
