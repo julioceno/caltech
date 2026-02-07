@@ -13,6 +13,10 @@ interface ProjectCardProps {
     className?: string;
 }
 
+const MAX_DESCRIPTION_LENGTH = 110;
+
+
+
 export default function ProjectCard({
     title,
     description,
@@ -29,7 +33,7 @@ export default function ProjectCard({
                 notchIcon={<FiArrowUpRight className="w-5 h-5 text-white" />}
             >
                 <div className="h-full flex flex-col bg-neutral-800 text-white">
-                    <div className="relative w-full h-[55%]">
+                    <div className="relative w-full h-50">
                         <Image
                             src={image}
                             alt={title}
@@ -43,7 +47,7 @@ export default function ProjectCard({
                             <h3 className="text-lg font-bold mb-2 leading-tight">
                                 {title}
                             </h3>
-                            <p className="text-sm leading-relaxed text-gray-400">
+                            <p className="text-sm leading-relaxed text-gray-400 line-clamp-3">
                                 {description}
                             </p>
                         </div>
