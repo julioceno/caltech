@@ -18,7 +18,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
     return (
         <NotchCard 
-            className={`w-[300px] h-[350px] md:w-[320px] md:h-[380px] lg:w-[350px] lg:h-[400px] ${className}`}
+            className={`w-[300px] h-[350px] md:w-[320px] md:h-[380px] lg:w-[390px] lg:h-[450px] ${className}`}
         >
             <div className="group p-8 h-full flex flex-col justify-between bg-gray-100 text-gray-800 hover:text-white hover:bg-orange-500 transition-colors duration-300">
                 <div className="mb-6">
@@ -34,11 +34,11 @@ export default function ServiceCard({
                 </div>
 
                 <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-4 leading-tight">
+                    <h3 className="text-xl lg:text-2xl font-bold mb-4 leading-tight">
                         {title}
                     </h3>
 
-                    <p className="text-sm leading-relaxed text-gray-600 group-hover:text-white transition-colors duration-300">
+                    <p className="text-sm lg:text-l leading-relaxed text-gray-600 group-hover:text-white transition-colors duration-300">
                         {description}
                     </p>
                 </div>

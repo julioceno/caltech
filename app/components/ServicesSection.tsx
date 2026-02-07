@@ -29,7 +29,7 @@ export default function ServicesSection() {
                     <SectionHeading title="Nossa experiência em construção industrial" />
                 </div>
                 
-                <div className="flex flex-col md:flex-row gap-8 justify-center lg:justify-start items-center md:items-stretch flex-wrap">
+                <div className="flex flex-col sm:flex-row gap-1.5 justify-between items-center sm:items-stretch flex-wrap">
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}
