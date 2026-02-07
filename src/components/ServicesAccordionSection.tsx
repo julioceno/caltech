@@ -1,6 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import Accordion from "./Accordion";
-import { servicesAccordionData } from "../../data/accordionData";
+import { servicesAccordionData } from "../data/accordionData";
 import Button from "./Button";
 import { FiArrowUpRight } from "react-icons/fi";
 

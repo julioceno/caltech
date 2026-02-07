@@ -1,6 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
-import { projectsData } from "@/data/projectsData";
+import { projectsData } from "@/src/data/projectsData";
 
 export default function Projects() {
     return (
