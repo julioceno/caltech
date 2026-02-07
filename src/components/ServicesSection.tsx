@@ -2,6 +2,7 @@
 
 import ServiceCard from "./ServiceCard";
 import SectionHeading from "./SectionHeading";
+import { title } from "process";
 
 export default function ServicesSection() {
     const services = [
@@ -25,11 +26,13 @@ export default function ServicesSection() {
     return (
         <section className="py-16">
             <div className="max-w-7xl mx-auto">
-                <div className="mb-16 lg:max-w-xl">
-                    <SectionHeading title="Nossa experiência em construção industrial" />
+                <div className="mb-16 xlg:max-w-xl">
+                   <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-tight font-bold text-primary text-center xlg:text-left`}>
+                        Nossa experiência em construção industrial
+                    </h2>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-1.5 justify-between items-center sm:items-stretch flex-wrap">
+                <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center flex-wrap xlg:flex-nowrap">
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}

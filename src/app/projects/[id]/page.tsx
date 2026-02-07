@@ -29,12 +29,12 @@ export default function ProjectPage() {
 		   <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4  gap-4 mb-8">
 			{imagePaths.map((path) => (
 				<div key={path} className="mb-4 break-inside-avoid">
-				<Image
-					src={path}
-					alt={path}
-					width={500}
-					height={500}
-					className="w-full h-auto rounded-lg"
+					<Image
+						src={path}
+						alt={path}
+						width={500}
+						height={500}
+						className="w-full h-auto rounded-lg"
 					/>
 				</div>
 				))}
