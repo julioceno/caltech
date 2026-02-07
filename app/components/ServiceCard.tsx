@@ -16,7 +16,6 @@ export default function ServiceCard({
     icon,
     className = "",
 }: ServiceCardProps) {
-    // TODO: Usar p PolygonCard em vez de NotchCard
     return (
         <NotchCard 
             className={`w-[300px] h-[350px] md:w-[320px] md:h-[380px] lg:w-[350px] lg:h-[400px] ${className}`}

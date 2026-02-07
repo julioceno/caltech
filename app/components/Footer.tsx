@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PolygonCard from "./PolygonCard";
+import BottomRightNotchCard from "./BottomRightNotchCard";
 import { NavItem } from "./NavItem";
 import { FaLinkedinIn, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
@@ -36,7 +36,7 @@ export default function Footer() {
 
     return (
         <footer>
-            <PolygonCard
+            <BottomRightNotchCard
                 className="w-full"
                 cardBgColor="bg-primary"
                 notchWidth={180}
@@ -75,7 +75,7 @@ export default function Footer() {
                         </p>
                     </div>
                 </div>
-            </PolygonCard>
+            </BottomRightNotchCard>
         </footer>
     );
 }

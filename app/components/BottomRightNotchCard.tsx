@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface PolygonCardProps {
+interface BottomRightNotchCardProps {
   children?: ReactNode;
   className?: string;
   notchSize?: number;
@@ -12,7 +12,7 @@ interface PolygonCardProps {
   notchContent?: ReactNode;
 }
 
-export default function PolygonCard({
+export default function BottomRightNotchCard({
   children,
   className = "",
   notchSize = 60,
@@ -22,7 +22,7 @@ export default function PolygonCard({
   notchBgColor = "#ffffff",
   cardBgColor = "bg-primary",
   notchContent,
-}: PolygonCardProps) {
+}: BottomRightNotchCardProps) {
   const width = notchWidth || notchSize;
   const height = notchHeight || notchSize;
 
