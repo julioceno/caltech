@@ -87,5 +87,9 @@ navLinks: [
   projectPage: {
     heading: "Resultados comprovados em construção comercial",
     requestQuoteButton: "Solicite um orçamento",
+    notFound: {
+      title: "Projeto não encontrado",
+      description: "O projeto que você está procurando não foi encontrado.",
+    },
   },
 };

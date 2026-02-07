@@ -1,5 +1,6 @@
 export const projectsData = [
     {
+        id: "oceanview-plaza",
         slug: "oceanview-plaza",
         title: "Complexo Comercial Oceanview Plaza",
         paragraph: '',
@@ -8,6 +9,7 @@ export const projectsData = [
         image: "/project-example.png",
     },
     {
+        id: "oceanview-plaza-2",
         slug: "oceanview-plaza-2",
         title: "Residencial Modular Vista Mar",
         paragraph: '',
@@ -16,6 +18,7 @@ export const projectsData = [
         image: "/project-example.png",
     },
     {
+        id: "oceanview-plaza-3",
         slug: "oceanview-plaza-3",
         title: "Hotel Boutique Verde Mar",
         paragraph: '',
@@ -25,7 +28,8 @@ export const projectsData = [
     },
 
     {
-        slug: "oceanview-plaza",
+        id: "hub-logistico-oceanview",
+        slug: "oceanview-plaza-4",
         title: "Hub Logístico Oceanview",
         paragraph: '',
         description:
@@ -33,7 +37,8 @@ export const projectsData = [
         image: "/project-example.png",
     },
     {
-        slug: "oceanview-plaza-3",
+        id: "campus-educacional-oceanview",
+        slug: "oceanview-plaza-5",
         title: "Campus Educacional Oceanview",
         paragraph: '',
         description:
@@ -42,7 +47,8 @@ export const projectsData = [
     },
 
     {
-        slug: "oceanview-plaza",
+        id: "sede-corporativa-oceanview",
+        slug: "oceanview-plaza-6",
         title: "Sede Corporativa Oceanview",
         paragraph: '',
         description:

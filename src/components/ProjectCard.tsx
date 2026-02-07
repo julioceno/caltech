@@ -13,10 +13,6 @@ interface ProjectCardProps {
     className?: string;
 }
 
-const MAX_DESCRIPTION_LENGTH = 110;
-
-
-
 export default function ProjectCard({
     title,
     description,
