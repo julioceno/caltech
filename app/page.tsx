@@ -3,7 +3,6 @@ import ServicesSection from "./components/ServicesSection";
 import AboutSection from "./components/AboutSection";
 import ServicesAccordionSection from "./components/ServicesAccordionSection";
 import ContactSection from "./components/ContactSection";
-import PolygonCard from "./components/PolygonCard";
 
 export default function Home() {
   return (
