@@ -6,14 +6,11 @@ export default function Projects() {
     return (
         <section className="bg-neutral-900 py-16 px-8 rounded-3xl">
             <div className="max-w-7xl mx-auto">
-                <SectionHeading
-                    title="Resultados comprovados em construção comercial"
-                    size="md"
-                    light
-                    className="lg:max-w-2xl"
-                />
+                <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-4xl leading-tight font-bold text-white text-center xlg:text-left xlg:max-w-2xl`}>
+                    Resultados comprovados em construção comercial
+                </h2>
 
-                <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center lg:justify-start items-center md:items-stretch flex-wrap">
+                <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center flex-wrap xlg:flex-nowrap">
                     {projectsData.map((project, index) => (
                         <ProjectCard
                             key={index}

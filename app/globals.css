@@ -20,6 +20,8 @@
   --color-green: var(--green);
   --width-8xl: 100rem;
   --max-width-8xl: 100rem;
+  
+  --breakpoint-xlg: 1210px;
 }
 
 
