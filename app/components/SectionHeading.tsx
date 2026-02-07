@@ -4,18 +4,12 @@ interface SectionHeadingProps {
     title: string;
     subtitle?: string;
     light?: boolean;
-    size?: 'md' | 'lg';
     className?: string;
 }
 
-const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle, light, className, size = 'lg' }) => {
-    const titleSizeClasses = size === 'md' 
-        ? 'text-2xl sm:text-3xl md:text-4xl lg:text-4xl' 
-        : 'text-3xl sm:text-4xl md:text-5xl lg:text-5xl';
-    
-    const subtitleSizeClasses = size === 'md'
-        ? 'text-sm sm:text-base'
-        : 'text-base sm:text-lg';
+const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle, light, className }) => {
+    const titleSizeClasses = 'text-3xl sm:text-4xl md:text-5xl lg:text-5xl';
+    const subtitleSizeClasses = 'text-base sm:text-lg';
 
     return (
         <div className={`flex flex-col gap-3 sm:gap-4 text-center lg:text-start ${className}`}>
