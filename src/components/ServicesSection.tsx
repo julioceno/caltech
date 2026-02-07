@@ -1,8 +1,6 @@
 "use client";
 
 import ServiceCard from "./ServiceCard";
-import SectionHeading from "./SectionHeading";
-import { title } from "process";
 
 export default function ServicesSection() {
     const services = [

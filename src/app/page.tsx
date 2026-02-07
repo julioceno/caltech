@@ -4,6 +4,7 @@ import AboutSection from "../components/AboutSection";
 import ServicesAccordionSection from "../components/ServicesAccordionSection";
 import ContactSection from "../components/ContactSection";
 import Projects from "../components/Projects";
+import Clients from "../components/Clients";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ServicesSection />
       <Projects />
       <ServicesAccordionSection />
+      <Clients />
       <ContactSection />
     </div>
   );
