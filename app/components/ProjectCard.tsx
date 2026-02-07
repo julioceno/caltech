@@ -1,5 +1,6 @@
 "use client";
 
+import { FiArrowUpRight } from "react-icons/fi";
 import NotchCard from "./NotchCard";
 import Image from "next/image";
 
@@ -23,6 +24,8 @@ export default function ProjectCard({
             <NotchCard
                 className="w-[300px] h-[350px] md:w-[320px] md:h-[380px] lg:w-[350px] lg:h-[400px]"
                 notchBgColor="bg-neutral-900"
+                notchSquareClassName="bg-secondary"
+                notchIcon={<FiArrowUpRight className="w-5 h-5 text-white" />}
             >
                 <div className="h-full flex flex-col bg-neutral-800 text-white">
                     <div className="relative w-full h-[55%]">

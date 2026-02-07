@@ -6,6 +6,8 @@ interface NotchCardProps {
   notchSize?: number;
   cornerRadius?: number;
   notchBgColor?: string;
+  notchSquareClassName?: "bg-primary" | 'bg-secondary';
+  notchIcon?: ReactNode;
 }
 
 export default function NotchCard({
@@ -14,6 +16,8 @@ export default function NotchCard({
   notchSize = 50,
   cornerRadius = 10,
   notchBgColor = "#ffffff",
+  notchSquareClassName = "bg-primary",
+  notchIcon,
 }: NotchCardProps) {
   return (
     <div className={`relative ${className}`}>
@@ -55,14 +59,16 @@ export default function NotchCard({
       />
 
       <div
-        className="absolute bg-primary rounded-lg pointer-events-none"
+        className={`absolute ${notchSquareClassName} rounded-lg flex items-center justify-center`}
         style={{
           width: notchSize - 8,
           height: notchSize - 8,
           right: 4,
           bottom: 4,
         }}
-      />
+      >
+        {notchIcon}
+      </div>
     </div>
   );
 }
