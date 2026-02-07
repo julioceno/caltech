@@ -1,4 +1,3 @@
-import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
 import { projectsData } from "@/src/data/projectsData";
 

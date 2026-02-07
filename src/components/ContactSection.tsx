@@ -17,7 +17,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     {
       title: "Falar com Comercial",
       subtitle: "Solicitar Orçamento Comercial",
-      phone: "(16) 99325-9020",
+      phone: "18 99789-0380",
       email: "comercial@caltech.com.br",
       whatsappLink: "https://wa.me/5516993259020",
       buttonText: "Entre em contato"
@@ -25,7 +25,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     {
       title: "Falar com Engenharia", 
       subtitle: "Departamento de Engenharia",
-      phone: "(16) 99325-9020",
+      phone: "18 99789-0380",
       email: "engenharia@caltech.com.br",
       whatsappLink: "https://wa.me/5516993259020",
       buttonText: "Entre em contato"
