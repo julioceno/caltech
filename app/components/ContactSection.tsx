@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionHeading from './SectionHeading';
 import ContactCard from './ContactCard';
+import TopLeftNotchCard from './TopLeftNotchCard';
 
 interface ContactSectionProps {
   className?: string;
@@ -32,27 +33,46 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   ];
 
   return (
-    <section className={`py-16 ${className}`}>
-        <div className="mx-auto lg:mx-0 mb-10 max-w-xl">
-          <SectionHeading 
-            title={sectionTitle}
-            subtitle={sectionSubtitle}
-          />
-        </div>
-        
-        <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-8 lg:gap-12">
-          {contacts.map((contact, index) => (
-            <ContactCard
-              key={index}
-              title={contact.title}
-              subtitle={contact.subtitle}
-              phone={contact.phone}
-              email={contact.email}
-              whatsappLink={contact.whatsappLink}
-              buttonText={contact.buttonText}
+    <section className={`py-16 flex justify-center lg:justify-between ${className}`}>
+      <div>
+        <div className="mx-auto lg:mx-0 mb-10 md:w-xl">
+            <SectionHeading 
+              title={sectionTitle}
+              subtitle={sectionSubtitle}
             />
-          ))}
+          </div>
+          
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-8 lg:gap-12">
+            {contacts.map((contact, index) => (
+              <ContactCard
+                key={index}
+                title={contact.title}
+                subtitle={contact.subtitle}
+                phone={contact.phone}
+                email={contact.email}
+                whatsappLink={contact.whatsappLink}
+                buttonText={contact.buttonText}
+              />
+            ))}
+          </div>
+      </div>
+        
+        <div className='hidden lg:block w-xl'>
+          <TopLeftNotchCard>
+              <h3 className=" font-bold text-orange-500 mb-4">
+                Sua operação exige soluções rápidas. Nós entregamos.
+              </h3>
+              <p className="mb-4">
+                Não deixe parar depois o que garante a segurança e a produtividade 
+                da sua planta hoje. Temos a equipe certificada e a agilidade que você 
+                precisa para resolver seu problema agora.
+              </p>
+              <p className="font-bold">
+                Não perca tempo. Fale com nossos engenheiros e resolva sua demanda.
+              </p>
+          </TopLeftNotchCard>
         </div>
+  
     </section>
   );
 };
