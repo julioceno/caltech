@@ -13,7 +13,7 @@ export default function ProjectPage() {
   return (
     <div>
 		<div className="lg:max-w-4xl space-y-4 mb-4">
-			<BackToHomeLink />
+			<BackToHomeLink href="/#servicos" />
 			<SectionHeading 
 				title={contentData.projectPage.heading}
 			/>

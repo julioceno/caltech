@@ -1,6 +1,6 @@
 export const projectsData = [
     {
-        id: "oceanview-plaza",
+        slug: "oceanview-plaza",
         title: "Projeto XPTO",
         paragraph: '',
         description:
@@ -9,7 +9,7 @@ export const projectsData = [
         link: "#",
     },
     {
-        id: "oceanview-plaza-2",
+        slug: "oceanview-plaza-2",
         title: "Projeto XPTO",
         paragraph: '',
         description:
@@ -18,7 +18,7 @@ export const projectsData = [
         link: "#",
     },
     {
-        id: "oceanview-plaza-3",
+        slug: "oceanview-plaza-3",
         title: "Projeto XPTO",
         paragraph: '',
         description:

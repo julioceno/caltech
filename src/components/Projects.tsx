@@ -11,13 +11,13 @@ export default function Projects() {
                 </h2>
 
                 <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center flex-wrap xlg:flex-nowrap">
-                    {projectsData.map((project, index) => (
+                    {projectsData.map((project) => (
                         <ProjectCard
-                            key={index}
+                            key={project.slug}
                             title={project.title}
                             description={project.description}
                             image={project.image}
-                            link={project.link}
+                            link={'/projetos/' + project.slug}
                         />
                     ))}
                 </div>
