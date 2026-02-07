@@ -50,10 +50,10 @@ export default function Footer() {
                         </p>
 
                         <nav className="flex items-center gap-4 md:gap-10">
-                            <NavItem href="#about" light>Sobre nós</NavItem>
-                            <NavItem href="#services" light>Serviços</NavItem>
-                            <NavItem href="#projects" light>Projetos</NavItem>
-                            <NavItem href="#contact" light>Contato</NavItem>
+                            <NavItem href="#about" isFooter>Sobre nós</NavItem>
+                            <NavItem href="#services" isFooter>Serviços</NavItem>
+                            <NavItem href="#projects" isFooter>Projetos</NavItem>
+                            <NavItem href="#contact" isFooter>Contato</NavItem>
                         </nav>
                     </div>
                     
