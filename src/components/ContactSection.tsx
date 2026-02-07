@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeading from './SectionHeading';
 import ContactCard from './ContactCard';
 import TopLeftNotchCard from './TopLeftNotchCard';
+import { contentData } from '../data/texts';
 
 interface ContactSectionProps {
   className?: string;
@@ -10,36 +11,18 @@ interface ContactSectionProps {
 const ContactSection: React.FC<ContactSectionProps> = ({
   className = "",
 }) => {
-  const sectionTitle = "Vamos construir algo incrível juntos!";
-  const sectionSubtitle = "Entre em contato conosco para uma consulta ou orçamento para seu próximo projeto comercial.";
-  
-  const contacts = [
-    {
-      title: "Falar com Comercial",
-      subtitle: "Solicitar Orçamento Comercial",
-      phone: "18 99789-0380",
-      email: "comercial@caltech.com.br",
-      whatsappLink: "https://wa.me/5516993259020",
-      buttonText: "Entre em contato"
-    },
-    {
-      title: "Falar com Engenharia", 
-      subtitle: "Departamento de Engenharia",
-      phone: "18 99789-0380",
-      email: "engenharia@caltech.com.br",
-      whatsappLink: "https://wa.me/5516993259020",
-      buttonText: "Entre em contato"
-    }
-  ];
+  const sectionTitle = contentData.contactSection.title;
+  const sectionSubtitle = contentData.contactSection.subtitle;
+  const contacts = contentData.contactSection.contacts;
 
   return (
     <section className={`py-16 flex justify-center lg:justify-between ${className}`}>
       <div>
         <div className="mx-auto lg:mx-0 mb-10 md:w-xl">
             <SectionHeading 
-              title={sectionTitle}
-              subtitle={sectionSubtitle}
-            />
+                title={sectionTitle}
+                subtitle={sectionSubtitle}
+              />
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-8 lg:gap-12">
@@ -60,15 +43,13 @@ const ContactSection: React.FC<ContactSectionProps> = ({
         <div className='hidden lg:block w-xl'>
           <TopLeftNotchCard>
               <h3 className=" font-bold text-orange-500 mb-4">
-                Sua operação exige soluções rápidas. Nós entregamos.
+                {contentData.contactSection.topLeftCard.heading}
               </h3>
               <p className="mb-4">
-                Não deixe parar depois o que garante a segurança e a produtividade 
-                da sua planta hoje. Temos a equipe certificada e a agilidade que você 
-                precisa para resolver seu problema agora.
+                {contentData.contactSection.topLeftCard.paragraph1}
               </p>
               <p className="font-bold">
-                Não perca tempo. Fale com nossos engenheiros e resolva sua demanda.
+                {contentData.contactSection.topLeftCard.paragraph2}
               </p>
           </TopLeftNotchCard>
         </div>

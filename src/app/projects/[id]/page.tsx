@@ -4,6 +4,7 @@ import Button from "@/src/components/Button";
 import BackToHomeLink from "@/src/components/BackToHomeLink";
 import { BsWhatsapp } from "react-icons/bs";
 import SectionHeading from "@/src/components/SectionHeading";
+import { contentData } from "@/src/data/texts";
 
 
 const imagePaths = ["/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png"];
@@ -14,7 +15,7 @@ export default function ProjectPage() {
 		<div className="lg:max-w-4xl space-y-4 mb-4">
 			<BackToHomeLink />
 			<SectionHeading 
-				title="Resultados comprovados em construção comercial"
+				title={contentData.projectPage.heading}
 			/>
 			<Button
 				href="https://wa.me/5516993259020"
@@ -22,7 +23,7 @@ export default function ProjectPage() {
 				className=""
 				iconLeft={<BsWhatsapp size={20} />}
 			>
-				Solicite um orçamento
+				{contentData.projectPage.requestQuoteButton}
 			</Button>
 		</div>
 

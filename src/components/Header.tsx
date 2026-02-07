@@ -6,13 +6,7 @@ import Image from "next/image";
 import { NavItem } from "./NavItem";
 import { HamburgerButton } from "./HamburgerButton";
 import Button from "./Button";
-
-const navLinks = [
-    { label: "Sobre nós", href: "#sobre" },
-    { label: "Serviços", href: "#servicos" },
-    { label: "Clientes", href: "#clientes" },
-    { label: "Contato", href: "#contato" },
-];
+import { contentData } from "../data/texts";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +29,7 @@ export default function Header() {
         </Link>
 
         <nav className="hidden flex-1 items-center justify-center gap-8 md:flex">
-          {navLinks.map((link) => (
+          {contentData.navLinks.map((link) => (
             <NavItem key={link.href} href={link.href}>
               {link.label}
             </NavItem>
@@ -44,7 +38,7 @@ export default function Header() {
 
         <div className="hidden md:block">
           <Button variant="primary">
-            Entre em contato
+            {contentData.header.contactButton}
           </Button>
         </div>
 
@@ -63,7 +57,7 @@ export default function Header() {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {navLinks.map((link) => (
+        {contentData.navLinks.map((link) => (
           <NavItem key={link.href} href={link.href} onClick={closeMenu}>
             {link.label}
           </NavItem>
@@ -71,7 +65,7 @@ export default function Header() {
         
         <div className="mt-4">
           <Button variant="primary">
-            Entre em contato
+            {contentData.header.contactButton}
           </Button>
         </div>
         

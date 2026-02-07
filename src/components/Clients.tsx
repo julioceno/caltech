@@ -2,7 +2,8 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import SectionHeading from "./SectionHeading";
+
+import { contentData } from "../data/texts";
 import CarouselNavButton from "./CarouselNavButton";
 
 
@@ -20,7 +21,7 @@ export default function Clients() {
     <section className="w-full py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-tight font-bold text-primary text-center`}>
-          Alguns de nossos clientes
+          {contentData.clients.heading}
         </h2>
         <div className="mt-12 relative">
           <CarouselNavButton direction="prev" ariaLabel="Previous clients" />
