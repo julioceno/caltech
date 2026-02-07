@@ -6,7 +6,6 @@ export const projectsData = [
         description:
             "Projeto de construção comercial com vista para o mar, ",
         image: "/project-example.png",
-        link: "#",
     },
     {
         slug: "oceanview-plaza-2",
@@ -15,7 +14,6 @@ export const projectsData = [
         description:
             "Projeto de construção comercial com vista para o mar, ",
         image: "/project-example.png",
-        link: "#",
     },
     {
         slug: "oceanview-plaza-3",
@@ -24,6 +22,5 @@ export const projectsData = [
         description:
             "Projeto de construção comercial com vista para o mar, ",
         image: "/project-example.png",
-        link: "#",
     },
 ];

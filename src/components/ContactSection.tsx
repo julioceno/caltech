@@ -16,7 +16,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   const contacts = contentData.contactSection.contacts;
 
   return (
-    <section id='contatos' className={`py-16 flex justify-center lg:justify-between ${className}`}>
+    <section id='contato' className={`py-16 flex justify-center lg:justify-between ${className}`}>
       <div>
         <div className="mx-auto lg:mx-0 mb-10 md:w-xl">
             <SectionHeading 
