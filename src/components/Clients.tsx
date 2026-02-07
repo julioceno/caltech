@@ -18,7 +18,7 @@ const clients = [
 
 export default function Clients() {
   return (
-    <section className="w-full py-16 px-4">
+    <section className="w-full py-16 px-4" id="clientes">
       <div className="max-w-7xl mx-auto">
         <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-tight font-bold text-primary text-center`}>
           {contentData.clients.heading}
