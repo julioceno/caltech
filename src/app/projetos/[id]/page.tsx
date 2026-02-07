@@ -4,7 +4,7 @@ import Button from "@/src/components/Button";
 import BackToHomeLink from "@/src/components/BackToHomeLink";
 import { BsWhatsapp } from "react-icons/bs";
 import SectionHeading from "@/src/components/SectionHeading";
-import { contentData } from "@/src/data/texts";
+import { contentData, whatsappComercial } from "@/src/data/texts";
 import { projectsData as projects } from "@/src/data/projectsData";
 import Link from "next/link";
 
@@ -61,7 +61,7 @@ const { id } = await params;
 				title={contentData.projectPage.heading}
 			/>
 			<Button
-				href="https://wa.me/5516993259020"
+				href={whatsappComercial}
 				variant='green'
 				className=""
 				iconLeft={<BsWhatsapp size={20} />}

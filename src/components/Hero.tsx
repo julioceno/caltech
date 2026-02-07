@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "./Button";
 import SectionHeading from "./SectionHeading";
 import { FiArrowUpRight } from "react-icons/fi";
-import { contentData } from "../data/texts";
+import { contentData, whatsappComercial } from "../data/texts";
 
 export default function Hero() {
     return (
@@ -13,7 +13,14 @@ export default function Hero() {
                     subtitle={contentData.hero.subtitle}
                 />
                 <div className="hidden lg:flex mt-8 flex-wrap  gap-4">
-                    <Button variant="featured" iconRight={<FiArrowUpRight className="w-5 h-5" />}>{contentData.hero.startProjectButton}</Button>
+                    <Button 
+                        variant="featured" 
+                        iconRight={<FiArrowUpRight className="w-5 h-5" />}
+                        href={whatsappComercial}
+                        openInNewTab
+                    >
+                            {contentData.hero.startProjectButton}
+                        </Button>
                 </div>
             </div>
 
