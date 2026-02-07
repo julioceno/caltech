@@ -10,7 +10,7 @@ export default function Projects() {
                     {contentData.projects.heading}
                 </h2>
 
-                <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center flex-wrap xlg:flex-nowrap">
+                <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center flex-wrap xlg:grid xlg:grid-cols-3 xlg:items-start">
                     {projectsData.map((project) => (
                         <ProjectCard
                             key={project.slug}
