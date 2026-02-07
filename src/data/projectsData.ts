@@ -1,28 +1,28 @@
 export const projectsData = [
     {
         id: "oceanview-plaza",
-        title: "Oceanview Plaza",
+        title: "Projeto XPTO",
         paragraph: '',
         description:
-            "A coastal office complex space with glass exteriors and ocean views.",
+            "Projeto de construção comercial com vista para o mar, ",
         image: "/project-example.png",
         link: "#",
     },
     {
         id: "oceanview-plaza-2",
-        title: "Oceanview Plaza",
+        title: "Projeto XPTO",
         paragraph: '',
         description:
-            "A coastal office complex space with glass exteriors and ocean views.",
+            "Projeto de construção comercial com vista para o mar, ",
         image: "/project-example.png",
         link: "#",
     },
     {
         id: "oceanview-plaza-3",
-        title: "Oceanview Plaza",
+        title: "Projeto XPTO",
         paragraph: '',
         description:
-            "A coastal office complex space with glass exteriors and ocean views.",
+            "Projeto de construção comercial com vista para o mar, ",
         image: "/project-example.png",
         link: "#",
     },

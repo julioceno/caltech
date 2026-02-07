@@ -12,7 +12,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle, light,
     const subtitleSizeClasses = 'text-base sm:text-lg';
 
     return (
-        <div className={`flex flex-col gap-3 sm:gap-4 text-center lg:text-start ${className}`}>
+        <div className={`flex flex-col gap-3 sm:gap-4  lg:text-start ${className}`}>
             <h2 className={`${titleSizeClasses} leading-tight font-bold ${light ? "text-white" : "text-primary"}`}>
                 {title}
             </h2>
