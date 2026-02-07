@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #000000;
+  --secondary: #F9773B;
+  --green: #22C55E;
 }
 
 @theme inline {
@@ -10,8 +13,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-plus-jakarta-sans);
   --font-inter: var(--font-inter);
-  --color-primary: #000000;
-  --color-secondary: #F9773B;
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-green: var(--green);
+  
+  --color-green: var(--green);
   --width-8xl: 100rem;
   --max-width-8xl: 100rem;
 }

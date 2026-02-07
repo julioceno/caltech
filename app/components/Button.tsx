@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import Link from "next/link";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "featured";
+type ButtonVariant = "primary" | "secondary" | "outline" | "featured" | "green";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
@@ -17,6 +17,7 @@ const variantStyles: Record<ButtonVariant, string> = {
     secondary: "bg-secondary text-white hover:bg-secondary/90",
     outline: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
     featured: "bg-primary text-white shadow-md ",
+    green: 'bg-green text-white hover:bg-green/90'
 };
 
 export default function Button({
