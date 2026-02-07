@@ -24,7 +24,7 @@ export default function ServiceCard({
                 <div className="mb-6">
                     <div className="w-16 h-16 flex items-center justify-center">
                         <Image
-                            src={`/assets/${icon}`}
+                            src={`/about/${icon}`}
                             alt={title}
                             width={48}
                             height={48}
