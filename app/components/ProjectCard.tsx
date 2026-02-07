@@ -3,6 +3,7 @@
 import { FiArrowUpRight } from "react-icons/fi";
 import NotchCard from "./NotchCard";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectCardProps {
     title: string;
@@ -20,10 +21,10 @@ export default function ProjectCard({
     className = "",
 }: ProjectCardProps) {
     return (
-        <div className={`hover:-translate-y-1 transition-transform duration-300 ${className}`}>
+        <Link href={link || "#"} className={`group hover:-translate-y-1 transition-transform duration-300 ${className}`}>
             <NotchCard
                 className="w-[300px] h-[350px] md:w-[320px] md:h-[380px] lg:w-[350px] lg:h-[400px]"
-                notchBgColor="bg-neutral-900"
+                notchBgColor="#171717" // TODO: Adjust this color to tailwind's neutral-900
                 notchSquareClassName="bg-secondary"
                 notchIcon={<FiArrowUpRight className="w-5 h-5 text-white" />}
             >
@@ -48,16 +49,15 @@ export default function ProjectCard({
                         </div>
 
                         {link && (
-                            <a
-                                href={link}
-                                className="text-sm text-white underline mt-3 hover:text-orange-400 transition-colors duration-300"
+                            <p
+                                className="text-sm text-white underline mt-3 group-hover:text-orange-400 transition-colors duration-300"
                             >
                                 Clique e saiba mais
-                            </a>
+                            </p>
                         )}
                     </div>
                 </div>
             </NotchCard>
-        </div>
+        </Link>
     );
 }
