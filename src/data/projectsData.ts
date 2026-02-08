@@ -7,6 +7,7 @@ export const projectsData = [
         description:
             "Complexo comercial de múltiplos pavimentos com fachada envidraçada, térreo em praça aberta e vista panorâmica do litoral.",
         image: "/project-example.png",
+        images: ["/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png"],
     },
     {
         id: "oceanview-plaza-2",
@@ -16,6 +17,7 @@ export const projectsData = [
         description:
             "Residencial de alto padrão com unidades modulares, varandas gourmet e áreas comuns integradas ao paisagismo costeiro.",
         image: "/project-example.png",
+        images: ["/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png"],
     },
     {
         id: "oceanview-plaza-3",
@@ -25,6 +27,7 @@ export const projectsData = [
         description:
             "Hotel boutique sustentável com cobertura verde, geração fotovoltaica e suítes projetadas para ventilação cruzada.",
         image: "/project-example.png",
+        images: ["/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png"],
     },
 
     {
@@ -35,6 +38,7 @@ export const projectsData = [
         description:
             "Centro logístico inteligente com docas automatizadas, monitoramento IoT e fluxo otimizado de cargas sensíveis.",
         image: "/project-example.png",
+        images: ["/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png"],
     },
     {
         id: "campus-educacional-oceanview",
@@ -44,6 +48,7 @@ export const projectsData = [
         description:
             "Campus educacional híbrido com laboratórios maker, auditório imersivo e espaços colaborativos de aprendizagem.",
         image: "/project-example.png",
+        images: ["/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png"],
     },
 
     {
@@ -54,6 +59,7 @@ export const projectsData = [
         description:
             "Sede corporativa com átrio iluminado, escritórios flexíveis e certificação WELL em andamento.",
         image: "/project-example.png",
+        images: ["/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png"],
     },
     
 ];

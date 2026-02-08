@@ -38,8 +38,6 @@ export async function generateStaticParams() {
   }));
 }
 
-const imagePaths = ["/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png", "/project-example.png"];
-
 export default async function ProjectPage({ params }: Props) {
 const { id } = await params;
 	const project = projects.find((p) => p.id === id);
@@ -47,12 +45,13 @@ const { id } = await params;
 	if (!project) {
 	return (
 		<div className="flex flex-col items-center justify-center text-center py-20">
-		<h1 className="text-4xl font-bold mb-4">{contentData.projectPage.notFound.title}</h1>
-		<p className="text-lg text-gray-600 mb-8">{contentData.projectPage.notFound.description}</p>
-		<BackToHomeLink href="/#servicos" />
+			<h1 className="text-4xl font-bold mb-4">{contentData.projectPage.notFound.title}</h1>
+			<p className="text-lg text-gray-600 mb-8">{contentData.projectPage.notFound.description}</p>
+			<BackToHomeLink href="/#servicos" />
 		</div>
 	);
 	}
+
   return (
     <div>
 		<div className="lg:max-w-4xl space-y-4 mb-4">
@@ -69,9 +68,8 @@ const { id } = await params;
 				{contentData.projectPage.requestQuoteButton}
 			</Button>
 		</div>
-
-		   <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4  gap-4 mb-8">
-			{imagePaths.map((path, index) => (
+		<div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4  gap-4 mb-8">
+			{project.images.map((path, index) => (
 				<div key={`${path}-${index}`} className="mb-4 break-inside-avoid">
 					<Image
 						src={path}
@@ -81,8 +79,8 @@ const { id } = await params;
 						className="w-full h-auto rounded-lg"
 					/>
 				</div>
-				))}
-			</div>
+			))}
+		</div>
     </div>
   );
 }
