@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { Metadata } from "next";
 import Button from "@/src/components/Button";
 import BackToHomeLink from "@/src/components/BackToHomeLink";
 import { BsWhatsapp } from "react-icons/bs";
 import SectionHeading from "@/src/components/SectionHeading";
+import ProjectGallery from "@/src/components/ProjectGallery";
 import { contentData, whatsappComercial } from "@/src/data/texts";
 import { projectsData as projects } from "@/src/data/projectsData";
 import { getProjectImages } from "@/src/utils/getProjectImages";
@@ -70,19 +70,7 @@ export default async function ProjectPage({ params }: Props) {
 				{contentData.projectPage.requestQuoteButton}
 			</Button>
 		</div>
-		<div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4  gap-4 mb-8">
-			{imagePaths.map((path, index) => (
-				<div key={`${path}-${index}`} className="mb-4 break-inside-avoid">
-					<Image
-						src={path}
-						alt={path}
-						width={500}
-						height={500}
-						className="w-full h-auto rounded-lg"
-					/>
-				</div>
-			))}
-		</div>
+		<ProjectGallery imagePaths={imagePaths} />
     </div>
   );
 }
