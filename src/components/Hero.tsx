@@ -5,6 +5,12 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { contentData, whatsappComercial } from "../data/texts";
 
 export default function Hero() {
+    const MainButton = () => (
+        <Button variant="featured" iconRight={<FiArrowUpRight className="w-5 h-5" />} href={whatsappComercial} openInNewTab>
+            {contentData.hero.startProjectButton}
+        </Button>
+    );
+
     return (
         <section className="max-w-7xl mx-auto flex flex-col lg:flex-row  lg:items-center gap-3 md:gap-6 lg:gap-16 w-full">
             <div className="flex-1 flex flex-col order-1">
@@ -13,14 +19,7 @@ export default function Hero() {
                     subtitle={contentData.hero.subtitle}
                 />
                 <div className="hidden lg:flex mt-8 flex-wrap  gap-4">
-                    <Button 
-                        variant="featured" 
-                        iconRight={<FiArrowUpRight className="w-5 h-5" />}
-                        href={whatsappComercial}
-                        openInNewTab
-                    >
-                            {contentData.hero.startProjectButton}
-                        </Button>
+                    <MainButton />
                 </div>
             </div>
 
@@ -37,8 +36,8 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="flex lg:hidden   flex-wrap justify-center gap-4 order-3 w-full">
-                <Button variant="featured" iconRight={<FiArrowUpRight className="w-5 h-5" />}>{contentData.hero.startProjectButton}</Button>
+            <div className="flex lg:hidden flex-wrap justify-center gap-4 order-3 w-full">
+                <MainButton />
             </div>
         </section>
     );
