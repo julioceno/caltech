@@ -60,6 +60,7 @@ export default async function ProjectPage({ params }: Props) {
 			<BackToHomeLink href="/#servicos" />
 			<SectionHeading 
 				title={contentData.projectPage.heading}
+				align="left"
 			/>
 			<Button
 				href={whatsappComercial}
