@@ -31,6 +31,7 @@ export default function Hero() {
                             src="/main.svg"
                             alt="Construção Caltech"
                             fill
+                            priority
                         />
                     </div>
                 </div>
