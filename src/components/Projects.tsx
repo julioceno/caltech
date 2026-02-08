@@ -13,11 +13,11 @@ export default function Projects() {
                 <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center flex-wrap xlg:grid xlg:grid-cols-3 xlg:items-start">
                     {projectsData.map((project) => (
                         <ProjectCard
-                            key={project.slug}
+                            key={project.id}
                             title={project.title}
                             description={project.description}
                             image={project.image}
-                            link={'/projetos/' + project.slug}
+                            link={'/projetos/' + project.id}
                         />
                     ))}
                 </div>

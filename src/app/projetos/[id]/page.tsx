@@ -6,7 +6,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import SectionHeading from "@/src/components/SectionHeading";
 import { contentData, whatsappComercial } from "@/src/data/texts";
 import { projectsData as projects } from "@/src/data/projectsData";
-import Link from "next/link";
+import { getProjectImages } from "@/src/utils/getProjectImages";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -39,7 +39,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ProjectPage({ params }: Props) {
-const { id } = await params;
+    const { id } = await params;
 	const project = projects.find((p) => p.id === id);
 
 	if (!project) {
@@ -51,6 +51,8 @@ const { id } = await params;
 		</div>
 	);
 	}
+
+  const imagePaths = await getProjectImages(project.folder.replace(/^\//, ""));
 
   return (
     <div>
@@ -69,7 +71,7 @@ const { id } = await params;
 			</Button>
 		</div>
 		<div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4  gap-4 mb-8">
-			{project.images.map((path, index) => (
+			{imagePaths.map((path, index) => (
 				<div key={`${path}-${index}`} className="mb-4 break-inside-avoid">
 					<Image
 						src={path}
