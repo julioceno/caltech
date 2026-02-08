@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
-import SectionHeading from "./SectionHeading";
+import SectionTitle from "./SectionTitle";
 import { FiArrowUpRight } from "react-icons/fi";
 import { contentData, whatsappComercial } from "../data/texts";
 
@@ -8,7 +8,7 @@ export default function Hero() {
     return (
         <section className="max-w-7xl mx-auto flex flex-col lg:flex-row  lg:items-center gap-3 md:gap-6 lg:gap-16 w-full">
             <div className="flex-1 flex flex-col order-1">
-                <SectionHeading
+                <SectionTitle
                     title={contentData.hero.title}
                     subtitle={contentData.hero.subtitle}
                 />

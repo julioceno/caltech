@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Button from "@/src/components/Button";
 import BackToHomeLink from "@/src/components/BackToHomeLink";
 import { BsWhatsapp } from "react-icons/bs";
-import SectionHeading from "@/src/components/SectionHeading";
+import SectionTitle from "@/src/components/SectionTitle";
 import ProjectGallery from "@/src/components/ProjectGallery";
 import { contentData, whatsappComercial } from "@/src/data/texts";
 import { projectsData as projects } from "@/src/data/projectsData";
@@ -58,7 +58,7 @@ export default async function ProjectPage({ params }: Props) {
     <div>
 		<div className="lg:max-w-4xl space-y-4 mb-4">
 			<BackToHomeLink href="/#servicos" />
-			<SectionHeading 
+			<SectionTitle 
 				title={contentData.projectPage.heading}
 				align="left"
 			/>

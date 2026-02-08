@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SectionHeadingProps {
+interface SectionTitleProps {
     title: string;
     subtitle?: string;
     light?: boolean;
@@ -20,7 +20,7 @@ const getAlignmentClasses = (align: 'left' | 'center' | 'default'): string => {
     }
 };
 
-const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle, light, className, align = 'default' }) => {
+const SectionTitle: React.FC<SectionTitleProps> = ({ title, subtitle, light, className, align = 'default' }) => {
     return (
         <div className={`flex flex-col gap-3 sm:gap-4 ${getAlignmentClasses(align)} ${className}`}>
             <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-tight font-bold ${light ? "text-white" : "text-primary"}`}>
@@ -35,4 +35,4 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle, light,
     );
 };
 
-export default SectionHeading;
+export default SectionTitle;

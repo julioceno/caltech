@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeading from './SectionHeading';
+import SectionTitle from './SectionTitle';
 import ContactCard from './ContactCard';
 import TopLeftNotchCard from './TopLeftNotchCard';
 import { contentData } from '../data/texts';
@@ -19,7 +19,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     <section id='contato' className={`py-16 flex justify-center lg:justify-between ${className}`}>
       <div>
         <div className="mx-auto lg:mx-0 mb-10 md:w-xl">
-            <SectionHeading 
+            <SectionTitle 
                 title={sectionTitle}
                 subtitle={sectionSubtitle}
               />
