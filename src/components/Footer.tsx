@@ -66,9 +66,14 @@ export default function Footer() {
                   width={100}
                   height={100}
                 />
-                <h3 className="text-xs font-medium text-white">
-                  Copyright © {currentYear} Caltech <span className="hidden md:inline">| {contentData.footer.cnpj}</span>
-                </h3>
+                <div className="flex flex-col items-center md:items-end gap-1">
+                  <h3 className="text-xs font-bold text-white">
+                    Copyright © {currentYear} Caltech <span className="hidden md:inline">| {contentData.footer.cnpj}</span>
+                  </h3>
+                  <p className="text-xs font-medium text-white">
+                    {contentData.footer.address}
+                  </p>
+                </div>
               </div>
               <p className="md:hidden text-center text-xs font-medium text-white">
                 {contentData.footer.cnpj}

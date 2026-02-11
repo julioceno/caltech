@@ -1,5 +1,4 @@
 export const whatsappComercial = "https://wa.me/5518997890380";
-const cnpj = '57.305.776/0001-37';
 
 export const contentData = {
   header: {
@@ -81,8 +80,8 @@ navLinks: [
   },
   footer: {
     slogan: "Construindo o futuro com excelência",
-    copyright: `Copyright © Caltech | ${cnpj}`,
-    cnpj
+    cnpj: '57.305.776/0001-37',
+    address: "Rua Saudade n°2544, Araçatuba-SP"
   },
   backToHome: {
     label: "Voltar para página inicial",
