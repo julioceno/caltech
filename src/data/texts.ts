@@ -1,4 +1,6 @@
 export const whatsappComercial = "https://wa.me/5518997890380";
+const cnpj = '57.305.776/0001-37';
+
 export const contentData = {
   header: {
     contactButton: "Entre em contato",
@@ -79,8 +81,8 @@ navLinks: [
   },
   footer: {
     slogan: "Construindo o futuro com excelência",
-    copyright: "Copyright © Caltech | 00.000.000/0000-00",
-    cnpj: "00.000.000/0000-00", // TODO: substituir pelo CNPJ real
+    copyright: `Copyright © Caltech | ${cnpj}`,
+    cnpj
   },
   backToHome: {
     label: "Voltar para página inicial",
