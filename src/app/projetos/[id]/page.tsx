@@ -56,12 +56,14 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <div>
-		<div className="lg:max-w-4xl space-y-4 mb-4">
+		<div className="space-y-4 mb-4">
 			<BackToHomeLink href="/#servicos" />
 			<SectionTitle 
 				title={contentData.projectPage.heading}
 				align="left"
+				className="lg:max-w-4xl "
 			/>
+			<p className="text-sm md:text-md  lg:text-lg text-gray-600">{project.paragraph}</p>
 			<Button
 				href={whatsappComercial}
 				variant='green'
