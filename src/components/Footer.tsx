@@ -1,32 +1,25 @@
 import Image from "next/image";
 import BottomRightNotchCard from "./BottomRightNotchCard";
 import { NavItem } from "./NavItem";
-import { contentData } from "../data/texts";
-import { FaLinkedinIn, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { callComercialLink, contentData, whatsappComercialLink } from "../data/texts";
+import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 
 function SocialIcons() {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-2">
       <a
-        href="#"
-        aria-label="LinkedIn"
+        href={whatsappComercialLink}
+        aria-label="WhatsApp"
         className="bg-white rounded-lg p-2 text-primary hover:opacity-80 transition-opacity"
       >
-        <FaLinkedinIn size={18} />
+        <FaWhatsapp size={20} />
       </a>
       <a
-        href="#"
-        aria-label="Instagram"
+        href={callComercialLink}
+        aria-label="Telefone"
         className="bg-white rounded-lg p-2 text-primary hover:opacity-80 transition-opacity"
       >
-        <FaInstagram size={18} />
-      </a>
-      <a
-        href="#"
-        aria-label="X"
-        className="bg-white rounded-lg p-2 text-primary hover:opacity-80 transition-opacity"
-      >
-        <FaXTwitter size={18} />
+        <FaPhone size={20} />
       </a>
     </div>
   );
@@ -40,7 +33,7 @@ export default function Footer() {
         <BottomRightNotchCard
           className="w-full"
           cardBgColor="bg-primary"
-          notchWidth={180}
+          notchWidth={120}
           notchHeight={40}
           notchContent={<SocialIcons />}
         >

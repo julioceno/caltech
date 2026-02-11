@@ -6,7 +6,7 @@ import Image from "next/image";
 import { NavItem } from "./NavItem";
 import { HamburgerButton } from "./HamburgerButton";
 import Button from "./Button";
-import { contentData, whatsappComercial } from "../data/texts";
+import { contentData, whatsappComercialLink } from "../data/texts";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,7 +66,7 @@ export default function Header() {
         <div className="mt-4">
           <Button 
             variant="primary"
-            href={whatsappComercial} 
+            href={whatsappComercialLink} 
             openInNewTab
           >
             {contentData.header.contactButton}

@@ -4,7 +4,7 @@ import BackToHomeLink from "@/src/components/BackToHomeLink";
 import { BsWhatsapp } from "react-icons/bs";
 import SectionTitle from "@/src/components/SectionTitle";
 import ProjectGallery from "@/src/components/ProjectGallery";
-import { contentData, whatsappComercial } from "@/src/data/texts";
+import { contentData, whatsappComercialLink } from "@/src/data/texts";
 import { projectsData as projects } from "@/src/data/projectsData";
 import { getProjectImages } from "@/src/utils/getProjectImages";
 
@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: Props) {
 			/>
 			<p className="text-sm md:text-md  lg:text-lg text-gray-600">{project.paragraph}</p>
 			<Button
-				href={whatsappComercial}
+				href={whatsappComercialLink}
 				variant='green'
 				className=""
 				iconLeft={<BsWhatsapp size={20} />}

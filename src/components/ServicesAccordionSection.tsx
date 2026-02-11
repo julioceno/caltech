@@ -3,7 +3,7 @@ import Accordion from "./Accordion";
 import { servicesAccordionData } from "../data/accordionData";
 import Button from "./Button";
 import { FiArrowUpRight } from "react-icons/fi";
-import { contentData, whatsappComercial } from "../data/texts";
+import { contentData, whatsappComercialLink } from "../data/texts";
 
 export default function ServicesAccordionSection() {
   return (
@@ -18,7 +18,7 @@ export default function ServicesAccordionSection() {
           <Button
             variant="featured"
             iconRight={<FiArrowUpRight className="w-5 h-5" />}
-            href={whatsappComercial}
+            href={whatsappComercialLink}
             openInNewTab
           >
             {contentData.servicesAccordionSection.startProjectButton}

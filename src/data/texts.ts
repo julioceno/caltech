@@ -1,4 +1,5 @@
-export const whatsappComercial = "https://wa.me/5518997890380";
+export const whatsappComercialLink = "https://wa.me/5518997890380";
+export const callComercialLink = "tel:+5518997890380";
 
 export const contentData = {
   header: {
@@ -60,7 +61,7 @@ navLinks: [
         subtitle: "Solicitar Orçamento Comercial",
         phone: "18 99789-0380",
         email: "comercial@caltech.com.br",
-        whatsappLink: whatsappComercial,
+        whatsappLink: whatsappComercialLink,
         buttonText: "Entre em contato",
       },
       {

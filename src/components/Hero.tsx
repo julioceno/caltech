@@ -2,11 +2,11 @@ import Image from "next/image";
 import Button from "./Button";
 import SectionTitle from "./SectionTitle";
 import { FiArrowUpRight } from "react-icons/fi";
-import { contentData, whatsappComercial } from "../data/texts";
+import { contentData, whatsappComercialLink } from "../data/texts";
 
 export default function Hero() {
     const MainButton = () => (
-        <Button variant="featured" iconRight={<FiArrowUpRight className="w-5 h-5" />} href={whatsappComercial} openInNewTab>
+        <Button variant="featured" iconRight={<FiArrowUpRight className="w-5 h-5" />} href={whatsappComercialLink} openInNewTab>
             {contentData.hero.startProjectButton}
         </Button>
     );
