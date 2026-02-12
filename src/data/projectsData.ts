@@ -9,16 +9,6 @@ export const projectsData = [
         folder: "/projects/01-soldagem-caldeiraria-grelhas",
     },
     {
-        id: "ventilador-exaustor",
-        title: "Remoção e Instalação de Ventilador Exaustor",
-        description: "Controle de particulados e gases no processo produtivo. Adaptação completa de dutos e sistemas elétricos.",
-        paragraph:
-            "Substituição de sistema de exaustão industrial vital para o controle ambiental do processo produtivo.\n\nO serviço inclui desmontagem segura do equipamento antigo com desconexão de dutos e sistemas elétricos, posicionamento e fixação do novo ventilador, e ajustes nas tubulações para conexão adequada.",
-        image: "/projects/02-ventilador-exaustor/img-1.jpeg",
-        images: [],
-        folder: "/projects/02-ventilador-exaustor",
-    },
-    {
         id: "caldeira-flamotubular",
         title: "Remoção e Instalação de Caldeira Flamotubular",
         description: "Logística com guindaste de grande porte (IM 70) e conexão aos sistemas de vapor e água.",
