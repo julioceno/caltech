@@ -29,12 +29,12 @@ navLinks: [
         icon: "blueprint-ruler.svg",
       },
       {
-        title: "Projetar e construir",
-        description: "Nossa abordagem integrada de projeto e construção agiliza a construção, lidando com o planejamento arquitetônico e um fluxo de trabalho tranquilo, desde o conceito até a conclusão.",
+        title: "Engenharia e Montagem",
+        description: "Nossa montagem industrial integrada agiliza a execução, unindo planejamento técnico e fluxo contínuo, do projeto ao start-up",
         icon: "building-3d.svg",
       },
       {
-        title: "Project management",
+        title: "Gerenciamento de Projetos",
         description: "Cuidamos de todos os detalhes, desde o orçamento e agendamento até a gestão de riscos e controle de qualidade.",
         icon: "construction.svg",
       },
