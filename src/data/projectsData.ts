@@ -14,7 +14,7 @@ export const projectsData = [
         description: "Logística com guindaste de grande porte (IM 70) e conexão aos sistemas de vapor e água.",
         paragraph:
             "Operação de substituição de caldeira flamotubular ARAUTERM envolvendo içamento e movimentação com guindaste de grande porte.\n\nO projeto abrange remoção da caldeira antiga, posicionamento preciso da nova unidade na casa de caldeiras e conexão completa aos sistemas de vapor e água.",
-        image: "/projects/03-caldeira-flamotubular/img-1.jpeg",
+        image: "/projects/03-caldeira-flamotubular/img-6.jpeg",
         images: [],
         folder: "/projects/03-caldeira-flamotubular",
     },
@@ -24,7 +24,7 @@ export const projectsData = [
         description: "Soldagem TIG para indústrias alimentícia, química e farmacêutica com acabamento de alta qualidade.",
         paragraph:
             "Soldagem especializada em tubulações e equipamentos de aço inoxidável para aplicações que exigem grau sanitário ou alta resistência à corrosão.\n\nUtilizamos soldagem TIG (GTAW) para acabamento fino e penetração total, com fabricação de spools, pré-montagem de linhas e montagem de tanques e reservatórios.",
-        image: "/projects/04-soldagem-aco-inoxidavel/img-1.jpeg",
+        image: "/projects/04-soldagem-aco-inoxidavel/img-6.jpeg",
         images: [],
         folder: "/projects/04-soldagem-aco-inoxidavel",
     },
