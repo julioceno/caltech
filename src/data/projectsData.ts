@@ -9,14 +9,14 @@ export const projectsData = [
         folder: "/projects/01-soldagem-caldeiraria-grelhas",
     },
     {
-        id: "caldeira-flamotubular",
-        title: "Remoção e Instalação de Caldeira Flamotubular",
+        id: "remocao-instalacao-equipamentos",
+        title: "Remoção e Instalação de Equipamentos",
         description: "Logística com guindaste de grande porte (IM 70) e conexão aos sistemas de vapor e água.",
         paragraph:
-            "Operação de substituição de caldeira flamotubular ARAUTERM envolvendo içamento e movimentação com guindaste de grande porte.\n\nO projeto abrange remoção da caldeira antiga, posicionamento preciso da nova unidade na casa de caldeiras e conexão completa aos sistemas de vapor e água.",
-        image: "/projects/03-caldeira-flamotubular/img-6.jpeg",
+            "Projeto de remoção e instalação de equipamentos industriais pesados, utilizando guindaste de grande porte (IM 70) para movimentação segura e eficiente.\n\nInclui a desconexão e reconexão de sistemas de vapor e água, com planejamento detalhado para minimizar o tempo de parada e garantir a integridade dos sistemas durante todo o processo.",
+        image: "/projects/03-remocao-instalacao-equipamentos/img-6.jpeg",
         images: [],
-        folder: "/projects/03-caldeira-flamotubular",
+        folder: "/projects/03-remocao-instalacao-equipamentos",
     },
     {
         id: "soldagem-aco-inoxidavel",

@@ -60,7 +60,7 @@ navLinks: [
         title: "Falar com Comercial",
         subtitle: "Solicitar Orçamento Comercial",
         phone: "18 99789-0380",
-        email: "comercial@caltech.com.br",
+        email: "comercial@caltechservicos.com.br",
         whatsappLink: whatsappComercialLink,
         buttonText: "Entre em contato",
       },
