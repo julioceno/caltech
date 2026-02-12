@@ -64,14 +64,7 @@ navLinks: [
         whatsappLink: whatsappComercialLink,
         buttonText: "Entre em contato",
       },
-      {
-        title: "Falar com Engenharia",
-        subtitle: "Departamento de Engenharia",
-        phone: "18 99789-0380",
-        email: "engenharia@caltech.com.br",
-        whatsappLink: "https://wa.me/18997890380",
-        buttonText: "Entre em contato",
-      },
+   
     ],
     topLeftCard: {
       heading: "Sua operação exige soluções rápidas. Nós entregamos.",
