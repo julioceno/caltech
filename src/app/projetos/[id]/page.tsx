@@ -59,7 +59,7 @@ export default async function ProjectPage({ params }: Props) {
 		<div className="space-y-4 mb-4">
 			<BackToHomeLink href="/#servicos" />
 			<SectionTitle 
-				title={contentData.projectPage.heading}
+				title={project.title}
 				align="left"
 				className="lg:max-w-4xl "
 			/>
